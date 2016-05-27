@@ -8,7 +8,7 @@ fn main() {
     println!("So lets get started");
     println!("Your total is:$ ");
 
-    let mut total = String::new();
+    let mut total      = String::new();
     let mut percantage = String::new();
 
     io::stdin().read_line(&mut total).expect("Failed to read line");
@@ -22,15 +22,25 @@ fn main() {
 
     io::stdin().read_line(&mut percantage).expect("Failed to read line");
     let percantage: f64 = percantage.trim().parse()
-        .expect("Pleasz type a number!");
+        .expect("Please type a number!");
 
-    let cent = total * percantage;
+    let tip_total = tip_total(total,percantage);
 
-    let new_total = total + cent;
+    let new_total = subtotal(total, cent);
 
     println!("The percantage that you want to give is: {} %", percantage);
 
-    println!("The recommended tip that you want to give is (in dollars): {} ", cent);
+    println!("The recommended tip that you want to give is (in dollars): {} ", tip_total);
 
     println!("your new total is:$ {} ", new_total);
+}
+
+
+fn tip_total(x: f64, y: f64) -> f64{
+    x * y
+}
+
+
+fn subtotal(x: f64, y: f64) -> f64{
+    x + y
 }
