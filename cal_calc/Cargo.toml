@@ -1,0 +1,6 @@
+[package]
+name = "cal_calc"
+version = "0.1.0"
+authors = ["Kalani Sanidad <ksanidad@hawaii.edu>"]
+
+[dependencies]
