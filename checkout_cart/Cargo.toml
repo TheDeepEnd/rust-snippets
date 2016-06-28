@@ -1,7 +1,6 @@
 [package]
-name = "cal_calc"
+name = "checkout_cart"
 version = "0.1.0"
 authors = ["Kalani Sanidad <ksanidad@hawaii.edu>"]
 
 [dependencies]
-time = "0.1"
